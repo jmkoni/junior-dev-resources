@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <link rel="import" href="../layouts/header.html">
+    <div w3-include-html="../layouts/header.html"></div>
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -88,4 +88,9 @@
       </footer>
     </div>
   </body>
+  <script>
+    $(document).ready( function () {
+      document.getElementById("java-link").classList.add('active');
+    }
+  </script>
 </html>
