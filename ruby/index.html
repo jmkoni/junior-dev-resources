@@ -1,42 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <script src="https://www.w3schools.com/lib/w3data.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <head>
-    <div w3-include-html="../layouts/header.html"></div>
+    <div id='header'></div>
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="../index.html">How To Get Your First Dev Job</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li id='which-language-link'><a href="../which_language.html">What Language Should You Choose?</a></li>
-            <li class='dropdown'>
-              <a href="#" class="dropdown-toggle" data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>
-                Languages
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li id='ruby-link'><a href="../ruby/index.html">Ruby</a></li>
-                <li id='python-link'><a href="../python/index.html">Python</a></li>
-                <li id='java-link'><a href="../java/index.html">Java</a></li>
-                <li id='javascript-link'><a href="../javascript/index.html">JavaScript</a></li>
-              </ul>
-            </li>
-            <li id='general-link'><a href="../general/index.html">General Knowledge</a></li>
-            <li id='contact-link'><a href="../contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id='navbar-layout'></div>
     <div class="container">
       <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-xs-12 col-sm-9">
@@ -91,8 +60,9 @@
   </body>
   <script>
     $(document).ready( function () {
+      $("#header").load("layouts/header.html");
+      $("#navbar-layout").load("layouts/inner_navbar.html");
       $("#ruby-link").addClass("active");
-    }
-    w3IncludeHTML();
+    });
   </script>
 </html>
