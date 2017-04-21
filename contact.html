@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <script src="https://www.w3schools.com/lib/w3data.js"></script>
-  <head id='header-contact'></head>
+  <head id='header'></head>
   <body>
-    <div w3-include-html="layouts/main_navbar.html"></div>
+    <div id='navbar-layout'></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
@@ -62,7 +62,8 @@
   <script>
     $(document).ready( function () {
       $("#contact-link").addClass("active");
-      $("#header-contact").load("layouts/header.html");
+      $("#header").load("layouts/header.html");
+      $("#navbar-layout").load("layouts/main_navbar.html");
     }
     w3IncludeHTML();
   </script>
